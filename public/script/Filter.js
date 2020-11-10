@@ -5,7 +5,7 @@ $(document).ready(function () {
   var cardgroup = 0;
   var cardfamily = 0;
   var numberPer = 1;
-  var checkfam = 0;
+  var numfam = 3;
   // var screen = $(window).height();
   // console.log(screen);
   // $('.carousel').height(screen);
@@ -82,7 +82,7 @@ $(document).ready(function () {
   $("#frontGroupCard").click(function () {
     numberPer = 1;
     $("#txtconcludeType").text("ประเภท : ไปกับเพื่อน " + numberPer);
-    $("#txttypeTravel").text("ประเภท : ไปกับผองเพื่อนอีก " + numberPer +" คน");
+    $("#txttypeTravel").text("ประเภท : ไปกับผองเพื่อนอีก " + numberPer + " คน");
     var $rotbackPerson = $("#btnbackPersonCard").closest('.card-container');
     console.log($rotbackPerson);
     if ($rotbackPerson.hasClass('hover')) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
     numberPer++;
     $("#txtconcludeType").text("ประเภท : ไปกับเพื่อน " + numberPer);
     $("#countNumofgroup").text(numberPer);
-    $("#txttypeTravel").text("ประเภท : ไปกับผองเพื่อนอีก " + numberPer +" คน");
+    $("#txttypeTravel").text("ประเภท : ไปกับผองเพื่อนอีก " + numberPer + " คน");
   });
 
   $("#btnMinus").click(function () {
@@ -136,7 +136,7 @@ $(document).ready(function () {
     }
     $("#txtconcludeType").text("ประเภท : ไปกับเพื่อน " + numberPer);
     $("#countNumofgroup").text(numberPer);
-    $("#txttypeTravel").text("ประเภท : ไปกับผองเพื่อนอีก " + numberPer +" คน");
+    $("#txttypeTravel").text("ประเภท : ไปกับผองเพื่อนอีก " + numberPer + " คน");
   });
 
   // person
@@ -198,50 +198,46 @@ $(document).ready(function () {
 
   // family
   $("#frontFamilyCard").click(function () {
+    $("#txtconcludeType").text("ประเภท : ไปกับครอบครัว " + numfam + " คน");
+    $("#txttypeTravel").text("ประเภท : ไปกับครอบครัว " + numfam + " คน");
     $("body").toggleClass("GroupCard_");
     $("body").toggleClass("PersonCard_");
-    numberPer = 1;
-    var $rotbackGroup = $("#backGroupCard").closest('.card-container');
-    // console.log($rotbackGroup);
-    if ($rotbackGroup.hasClass('hover')) {
-      $rotbackGroup.removeClass('hover');
-    }
-    var $rotbackPerson = $("#btnbackPersonCard").closest('.card-container');
-    // console.log($rotbackPerson);
-    if ($rotbackPerson.hasClass('hover')) {
-      $rotbackPerson.removeClass('hover');
-    }
 
-    if(checkfam == 0){
-      $("#txtconcludeType").text("ประเภท : ครอบครัว");
-      $("#txttypeTravel").text("ประเภท : ครอบครัว");
-      checkfam =1;
-    }else if(checkfam == 1){
-      $("#txtconcludeType").text("ประเภท : ");
-      $("#txttypeTravel").text("ประเภท : ");
-      checkfam =0;
-    }
-    
-    // if (cardgroup == 0) {
-    //   $("body").toggleClass("GroupCard_");
-    //   cardgroup = 1;
-    // }
+    $("#btnPlusFam").click(function () {
+      numfam++;
+      $("#txtconcludeType").text("ประเภท : ไปกับครอบครัว " + numfam + " คน");
+      $("#countNumofFamily").text(numfam);
+      $("#txttypeTravel").text("ประเภท : ไปกับครอบครัว " + numfam + " คน");
+    });
+  
+    $("#btnMinusFam").click(function () {
+      if (numfam < 3) {
+        numfam = 3;
+      } else if (numfam > 3) {
+        numfam--;
+      }
+      $("#txtconcludeType").text("ประเภท : ไปกับครอบครัว " + numfam + " คน");
+      $("#countNumofFamily").text(numfam);
+      $("#txttypeTravel").text("ประเภท : ไปกับครอบครัว " + numfam + " คน");
+    });
 
-    // if (cardper == 0) {
-    //   $("body").toggleClass("PersonCard_");
-    //   cardper = 1;
-    // }
-
+  });
+  $("#btnbackFamilyCard").click(function () {
+    $("body").toggleClass("GroupCard_");
+    $("body").toggleClass("PersonCard_");
+    $("#txtconcludeType").text("ประเภท : ");
+    $("#txttypeTravel").text("ประเภท : ");
+    numfam = 3;
 
   });
 
   //input money
-  $("#inmoney").keyup(function(){
+  $("#inmoney").keyup(function () {
     $("#txtmoney").text("ใช้เงิน " + $("#inmoney").val() + " Baht");
   });
 
   // btn create plan
-  $("#btnCreateplan").click(function(){
+  $("#btnCreateplan").click(function () {
     window.location.replace("viewplan.html");
   });
 
