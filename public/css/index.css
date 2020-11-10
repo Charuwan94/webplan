@@ -5,7 +5,7 @@ html, body * {
 }
 
 body {
-  background: linear-gradient( rgba(246, 247, 249, 0.8), rgba(246, 247, 249, 0.8)), url(../image/) no-repeat center center fixed;
+  background: linear-gradient( rgba(246, 247, 249, 0.8), rgba(246, 247, 249, 0.8)), url(../image/03.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
