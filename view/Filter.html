@@ -59,7 +59,7 @@
           <input class="form-control mx-3 my-2 col-xl-3 col-md-3 col-sm-11 col-11" type="text"
             placeholder="จุดเริ่มต้น">
           <input class="form-control mx-3 my-2 col-xl-3 col-md-3 col-sm-11 col-11" type="text" placeholder="ปลายทาง">
-          
+
         </div>
       </div>
     </div>
@@ -78,8 +78,7 @@
                 <option value="Rainly">ฤดูฝน</option>
               </select>
             </div>
-            <img
-              src="https://media.tenor.com/images/3b5a671752fdfaa890a85384306d357e/tenor.png"
+            <img src="https://media.tenor.com/images/3b5a671752fdfaa890a85384306d357e/tenor.png"
               class="img-fluid mb-3 rounded" alt="" id="picturetemp">
           </div>
         </div>
@@ -110,26 +109,26 @@
                             </div>
                             <hr class="my-2">
                             <div class="btn-area col-12 p-0" id="btnPerson26-30">
-                              <h5 class="display-5 my-lg-4 my-3" >26-30</h5>
+                              <h5 class="display-5 my-lg-4 my-3">26-30</h5>
                             </div>
                             <hr class="my-2">
                             <div class="btn-area col-12 p-0" id="btnPerson31-60">
-                              <h5 class="display-5 my-lg-4 my-3" >31-60</h5>
+                              <h5 class="display-5 my-lg-4 my-3">31-60</h5>
                             </div>
                           </div>
 
                         </div>
                       </div>
                       <footer>
-                        <button class="btn btn-simple col-12" rel="tooltip" title="Flip Card"
-                          onclick="rotateCard(this)" id="btnbackPersonCard">Back</button>
+                        <button class="btn btn-simple col-12" rel="tooltip" title="Flip Card" onclick="rotateCard(this)"
+                          id="btnbackPersonCard">Back</button>
                       </footer>
                     </div>
                   </div> <!-- end back panel -->
                 </div> <!-- end card -->
               </div>
 
-              <div class="col-md-4 col-sm-6" >
+              <div class="col-md-4 col-sm-6">
                 <div class="card-container manual-flip">
                   <div class="card" style="border: none;">
                     <div class="front">
@@ -146,13 +145,15 @@
                           <hr class="my-2">
                           <div class="card-body p-0">
                             <div class="btn-area col-12">
-                              <button class="btn btn-primary btn-lg" style="background: transparent;" id="btnPlus">+</button>
+                              <button class="btn btn-primary btn-lg" style="background: transparent;"
+                                id="btnPlus">+</button>
                             </div>
                             <div class="btn-area col-12">
                               <h5 class="display-5 m-4" id="countNumofgroup">1</h5>
                             </div>
                             <div class="btn-area col-12">
-                              <button class="btn btn-primary btn-lg" style="background: transparent;" id="btnMinus">-</button>
+                              <button class="btn btn-primary btn-lg" style="background: transparent;"
+                                id="btnMinus">-</button>
                             </div>
                             <hr class="my-2">
                           </div>
@@ -160,8 +161,8 @@
                         </div>
                       </div>
                       <footer>
-                        <button class="btn btn-simple col-12" rel="tooltip" title="Flip Card"
-                          onclick="rotateCard(this)" id="backGroupCard">Back</button>
+                        <button class="btn btn-simple col-12" rel="tooltip" title="Flip Card" onclick="rotateCard(this)"
+                          id="backGroupCard">Back</button>
                       </footer>
                     </div>
                   </div> <!-- end back panel -->
@@ -172,11 +173,38 @@
                 <div class="card-container manual-flip">
                   <div class="card" style="border: none;">
                     <div class="front">
-                      <div class="cover rounded shadow" id="frontFamilyCard">
+                      <div class="cover rounded shadow" id="frontFamilyCard" onclick="rotateCard(this)">
                         <img
                           src="https://images.unsplash.com/photo-1529518152792-d08317b26e22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" />
                       </div>
                       <p class="mt-3">ครอบครัว</p>
+                    </div>
+                    <div class="back align-items-end col-12">
+                      <div class="content">
+                        <div class="main">
+                          <h4 class="text-center">จำนวนคน</h4>
+                          <hr class="my-2">
+                          <div class="card-body p-0">
+                            <div class="btn-area col-12">
+                              <button class="btn btn-primary btn-lg" style="background: transparent;"
+                                id="btnPlusFam">+</button>
+                            </div>
+                            <div class="btn-area col-12">
+                              <h5 class="display-5 m-4" id="countNumofFamily">3</h5>
+                            </div>
+                            <div class="btn-area col-12">
+                              <button class="btn btn-primary btn-lg" style="background: transparent;"
+                                id="btnMinusFam">-</button>
+                            </div>
+                            <hr class="my-2">
+                          </div>
+
+                        </div>
+                      </div>
+                      <footer>
+                        <button class="btn btn-simple col-12" rel="tooltip" title="Flip Card" onclick="rotateCard(this)"
+                        id="btnbackFamilyCard" >Back</button>
+                      </footer>
                     </div>
                   </div> <!-- end front panel -->
                 </div> <!-- end card -->
@@ -190,7 +218,8 @@
       <div class="carousel-item">
         <div class="row text-center justify-content-center">
           <div class="filter col-9 rounded shadow d-lg-flex justify-content-center my-5">
-            <div class="col-xl-6 col-lg-6 col-sm-12 text-center justify-content-center" style="background-color: white;">
+            <div class="col-xl-6 col-lg-6 col-sm-12 text-center justify-content-center"
+              style="background-color: white;">
               <h3 class="display-5 align-self-center mt-3">เลือกจำนวนวัน</h3>
               <div id="sandbox-container">
                 <input type="text col-12" id="date" value="" style="display: none;">
@@ -213,9 +242,7 @@
       <div class="carousel-item">
         <div class="row text-center justify-content-center">
           <div class="filter col-lg-9 col-md-8 col-sm-7 col-6 rounded shadow my-5">
-            <img
-              src=""
-              class="img-fluid mb-3 rounded my-3" alt="" id="selecttemp">
+            <img src="" class="img-fluid mb-3 rounded my-3" alt="" id="selecttemp">
             <div class="text-center mt-2 align-items-center" style="background-color: white;">
               <div class="justify-content-between">
                 <h5 class="display-5" id="txttypeTravel">ประเภท : </h5>
